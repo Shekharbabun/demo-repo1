@@ -1,2 +1,17 @@
-123466
-12354,
+pipeline{
+   agent none
+     stages{
+       stage("stage-1"){
+         agent {label 'java'}
+           steps{
+             sh 'touch master.txt'
+             }
+           }
+        stage("stage-2"){
+         agent {label 'java'}
+           steps{
+             sh 'mkdir master'
+      }
+    }
+  }
+}
