@@ -10,7 +10,7 @@ pipeline{
         stage("stage-2"){
          agent {label 'java'}
            steps{
-             sh 'mkdir master'
+             sh mkdir 'master'
       }
     }
   }
